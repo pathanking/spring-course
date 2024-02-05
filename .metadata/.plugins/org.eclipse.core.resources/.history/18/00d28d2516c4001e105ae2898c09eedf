@@ -1,0 +1,18 @@
+package com.mycompany;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		try (var container = new AnnotationConfigApplicationContext(AppConfig.class)) {
+			EmailClient bean = container.getBean(EmailClient.class);
+			EmailClient bean2 = container.getBean(EmailClient.class);
+
+			System.out.println(bean.hashCode());
+			System.out.println(bean2.hashCode());
+			
+			//bean.sendEmail("Welcome to Spring Framework!");
+		}
+	}
+}

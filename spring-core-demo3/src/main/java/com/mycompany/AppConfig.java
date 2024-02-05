@@ -2,6 +2,7 @@ package com.mycompany;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class AppConfig {
@@ -17,6 +18,7 @@ public class AppConfig {
 	}
 
 	@Bean
+	//@Scope("prototype")
 	public EmailClient getEmailClient() {
 		EmailClient emailClient = new EmailClient(getBasic());
 		return emailClient;

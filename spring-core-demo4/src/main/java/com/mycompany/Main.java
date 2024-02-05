@@ -8,7 +8,7 @@ public class Main {
 		try (var container = new AnnotationConfigApplicationContext(AppConfig.class)) {
 			EmailClient bean = container.getBean(EmailClient.class);
 
-			bean.sendEmail("Welcome to Spring Framework!");
+			bean.sendEmail();
 		}
 	}
 }

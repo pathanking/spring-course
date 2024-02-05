@@ -1,7 +1,9 @@
 package com.mycompany;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
+@Primary
 @Component("adv")
 public class AdvSpellChecker implements SpellChecker {
 

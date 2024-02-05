@@ -9,7 +9,7 @@
 	
 	<bean class="com.mycompany.AdvSpellChecker" id="adv" />
 	
-	<bean class="com.mycompany.EmailClient" id="emailClient">
+	<bean class="com.mycompany.EmailClient" id="emailClient" init-method="init" destroy-method="destroy">
 		<constructor-arg name="spellChecker" ref="adv"/>
 	</bean>
 	
