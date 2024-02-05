@@ -1,0 +1,12 @@
+package com.mycompany;
+
+public class HomeAddress extends Address {
+
+	@Override
+	protected void showAddress() {
+		System.out.println("--- Home Address ---");
+		System.out.println("State : " + getState());
+		System.out.println("City : " + getCity());
+	}
+
+}

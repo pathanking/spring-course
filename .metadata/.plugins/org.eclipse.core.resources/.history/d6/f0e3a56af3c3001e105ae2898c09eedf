@@ -1,0 +1,17 @@
+package com.mycompany;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class EmailClient {
+
+	private SpellChecker advSpellChecker;
+
+	public EmailClient(SpellChecker advSpellChecker) {
+		this.advSpellChecker = advSpellChecker;
+	}
+
+	public void sendEmail(String message) {
+		advSpellChecker.spellCheck(message);
+	}
+}

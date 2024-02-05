@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+				
+		<bean id="home" class="com.mycompany.HomeAddress">
+			<property name="landmark" value="Near Post Office" />
+		</bean>
+		
+		<bean id="ofc" class="com.mycompany.OfficeAddress">
+			<property name="companyName" value="ABC Corp" />
+		</bean>
+		
+		<bean id="employee" class="com.mycompany.Employee">
+			<property name="ename" value="Bob" />
+			<property name="email" value="bob@e.com" />
+			<property name="address" ref="ofc" />
+		</bean>
+</beans>

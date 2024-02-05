@@ -1,0 +1,10 @@
+package com.mycompany;
+
+public class EmailClient {
+
+	private SpellChecker spellChecker = new BasicSpellChecker();
+
+	public void sendEmail(String message) {
+		spellChecker.spellCheck(message);
+	}
+}

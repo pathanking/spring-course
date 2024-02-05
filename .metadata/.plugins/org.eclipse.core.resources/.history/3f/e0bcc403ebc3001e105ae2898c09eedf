@@ -1,0 +1,10 @@
+package com.mycompany;
+
+public class BasicSpellChecker implements SpellChecker{
+
+	@Override
+	public void spellCheck(String message) {
+		
+	}
+
+}

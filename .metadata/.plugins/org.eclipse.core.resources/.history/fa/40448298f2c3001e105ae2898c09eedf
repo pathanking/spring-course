@@ -1,0 +1,8 @@
+package com.mycompany;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class AppConfig {
+
+}

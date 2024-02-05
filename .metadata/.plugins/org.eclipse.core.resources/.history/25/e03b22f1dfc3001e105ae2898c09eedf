@@ -1,0 +1,9 @@
+package com.mycompany;
+
+public class Employee {
+	private String ename;
+	private String email;
+	private Address address;
+	
+	
+}

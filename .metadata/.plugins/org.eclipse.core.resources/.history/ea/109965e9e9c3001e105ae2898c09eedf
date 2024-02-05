@@ -1,0 +1,23 @@
+package com.mycompany;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+		
+		HomeAddress bean = context.getBean(HomeAddress.class);
+		System.out.println(bean);
+		
+		
+		OfficeAddress bean2 = context.getBean(OfficeAddress.class);
+		System.out.println(bean2);
+		
+		//Employee bean = context.getBean("employee2", Employee.class);
+		
+		//System.out.println(bean);
+	}
+}

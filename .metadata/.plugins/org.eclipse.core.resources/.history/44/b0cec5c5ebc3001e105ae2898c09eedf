@@ -1,0 +1,9 @@
+package com.mycompany;
+
+public class AdvSpellChecker implements SpellChecker {
+
+	@Override
+	public void spellCheck(String message) {
+
+	}
+}

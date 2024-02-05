@@ -1,0 +1,10 @@
+package com.mycompany;
+
+public class OfficeAddress extends Address {
+
+	@Override
+	protected void showAddress() {
+
+	}
+
+}

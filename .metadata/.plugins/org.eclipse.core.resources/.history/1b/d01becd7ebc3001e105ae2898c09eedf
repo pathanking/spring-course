@@ -1,0 +1,11 @@
+package com.mycompany;
+
+public class EmailClient {
+
+	private SpellChecker spellChecker;
+	
+	
+	public void sendEmail(String message) {
+		spellChecker.spellCheck(message);
+	}
+}

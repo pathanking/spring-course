@@ -1,0 +1,12 @@
+package com.mycompany;
+
+public class Main {
+
+	public static void main(String[] args) {
+		AdvSpellChecker advSpellChecker = new AdvSpellChecker();
+		
+		EmailClient client = new EmailClient(advSpellChecker);
+		
+		client.sendEmail("Test Email");
+	}
+}

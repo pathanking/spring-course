@@ -1,0 +1,18 @@
+package com.mycompany;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Employee emp = new Employee();
+		emp.setEname("John");
+		emp.setEmail("john@e.com");
+		
+		OfficeAddress ofc = new OfficeAddress();
+		ofc.setCity("Hyd");
+		ofc.setState("TS");
+		ofc.setCompanyName("ABC Company");;
+		
+		emp.setAddress();
+		
+	}
+}

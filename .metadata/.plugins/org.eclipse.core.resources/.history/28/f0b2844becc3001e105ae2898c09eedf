@@ -1,0 +1,10 @@
+package com.mycompany;
+
+public class Main {
+
+	public static void main(String[] args) {
+		EmailClient client = new EmailClient();
+		
+		client.sendEmail("Test Email");
+	}
+}
