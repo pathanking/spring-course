@@ -43,15 +43,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.mycompany"/>
 		</list>
 		<list key="groupId">
-			<item value="com.mycompany"/>
 		</list>
 		<list key="artifactId">
-			<item value="first-web-app"/>
-			<item value="web-app"/>
-			<item value="demo-artifact"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -67,10 +62,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.mycompany"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="spring-core-demo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
