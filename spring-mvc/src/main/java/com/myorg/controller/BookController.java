@@ -64,5 +64,4 @@ public class BookController {
 		return "redirect:/books/v1/api";
 		
 	}
-	
 }
