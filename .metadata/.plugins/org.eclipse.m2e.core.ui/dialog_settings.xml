@@ -20,6 +20,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="E:\techM\microservices\rest-api-demo"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -62,11 +63,13 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.myorg"/>
 			<item value="com.mycompany"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="junit-demo"/>
 			<item value="spring-core-demo"/>
 		</list>
 		<list key="projectNameTemplate">
