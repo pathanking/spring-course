@@ -2,7 +2,8 @@ package com.myorg.controller;
 
 import java.util.List;
 
-import org.springframework.stereotype.Controller;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,8 +11,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.myorg.entities.Customer;
@@ -30,28 +29,28 @@ public class CustomerController {
 	}
 
 	@GetMapping("/list")
-	public List<Customer> customers() {
-		return service.listCustomers();
+	public ResponseEntity<List<Customer>> customers() {
+		return new ResponseEntity<List<Customer>>(service.listCustomers(), HttpStatus.OK) ;
 	}
 
 	@PostMapping("/save")
-	public Customer add(@Valid @RequestBody Customer customer) {
-		return service.saveCustomer(customer);
+	public ResponseEntity<Customer> add(@Valid @RequestBody Customer customer) {
+		return new ResponseEntity<Customer>(service.saveCustomer(customer), HttpStatus.CREATED);
 	}
 
 	@GetMapping("/getone/{cid}")
-	public Customer findOne(@PathVariable Long cid) {
-		return service.getOne(cid);
+	public ResponseEntity<Customer> findOne(@PathVariable Long cid) {
+		return new ResponseEntity<Customer>(service.getOne(cid), HttpStatus.OK); 
 	}
 
 	@PutMapping("/update/{cid}")
-	public Customer update(@PathVariable Long cid, @Valid @RequestBody Customer customer) {
-		return service.updateCustomer(cid, customer);
+	public ResponseEntity<Customer> update(@PathVariable Long cid, @Valid @RequestBody Customer customer) {
+		return new ResponseEntity<Customer>(service.updateCustomer(cid, customer), HttpStatus.ACCEPTED);
 	}
 
 	@DeleteMapping("/delete/{cid}")
-	public String delete(@PathVariable Long cid) {
+	public ResponseEntity<String> delete(@PathVariable Long cid) {
 		service.deleteCustomer(cid);
-		return "Customer Record Deleted Successfully!";
+		return new ResponseEntity<String>("Customer Record Deleted Successfully!", HttpStatus.ACCEPTED);
 	}
 }
